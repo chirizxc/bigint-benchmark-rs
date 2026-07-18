@@ -40,14 +40,14 @@ jobs:
         run: cargo build --release
 
       - name: "Run benchmarks"
-        run: .github/scripts/run-benchmarks.sh results.csv
+        run: bash .github/scripts/run-benchmarks.sh results.csv
 
       - name: "Generate results"
         run: .github/scripts/render-results.py results.csv > results.md
 
       - name: "Update README"
         if: github.event_name != 'pull_request'
-        run: .github/scripts/render-results.py results.csv --readme README.md
+        run: python3 .github/scripts/render-results.py results.csv --readme README.md
 
       - name: "Commit README"
         if: github.event_name != 'pull_request'
