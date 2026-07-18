@@ -36,7 +36,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libgmp-dev python3
 
-      - name: "build"
+      - name: "cargo build"
         run: cargo build --release
 
       - name: "Run benchmarks"
