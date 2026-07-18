@@ -43,7 +43,7 @@ jobs:
         run: bash .github/scripts/run-benchmarks.sh results.csv
 
       - name: "Generate results"
-        run: .github/scripts/render-results.py results.csv > results.md
+        run: python3 .github/scripts/render-results.py results.csv > results.md
 
       - name: "Update README"
         if: github.event_name != 'pull_request'
