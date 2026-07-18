@@ -149,7 +149,7 @@ fn run_task_using<T: Number>(task: &str, n: u32, iter: u32) -> (String, Duration
         };
         match &answer {
             None => answer = Some(a),
-            Some(ans) => assert!(a == *ans),
+            Some(ans) => assert_eq!(a, *ans),
         }
     }
     let time = start_time.elapsed();
