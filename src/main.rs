@@ -1,6 +1,7 @@
-use clap::{command, value_parser, Arg, ArgAction, Command};
-use number::Number;
 use std::time::{Duration, Instant};
+
+use clap::{Arg, ArgAction, Command, command, value_parser};
+use number::Number;
 
 mod digits_of_e;
 mod fib;
